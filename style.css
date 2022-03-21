@@ -37,26 +37,56 @@
 
 body {
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Gowun Batang", sans-serif;
   cursor: default;
 }
 
-a:link {
-  color: black;
+a {
   text-decoration: none;
-}
-a:visited {
-  color: black;
-  text-decoration: none;
-}
-a:hover {
-  color: black;
-  text-decoration: none;
+  color: var(--color-black);
 }
 
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Typography */
+
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+  margin: 16px 0px;
+}
+
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+
+  margin: 4px 0;
+}
+
+/* Header */
+
 header {
-  height: 100%;
-  width: 100%;
+  padding: 40px;
+  padding-top: 40px;
 }
 
 .page_logo {
@@ -64,21 +94,18 @@ header {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   justify-content: center;
+  font-size: 70px;
   margin-top: 20px;
 }
 
 .page_logo i {
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 10px;
+  margin: 20px;
 }
 
 .navbar_menu {
   display: flex;
   justify-content: center;
   font-size: var(--font-medium);
-  list-style: none;
-  margin-right: 10px;
 }
 
 .navbar_menu_item {
@@ -87,4 +114,38 @@ header {
   cursor: pointer;
   border: 1px solid transparent;
   border-radius: var(--size-border-radius);
+}
+
+.navbar_menu_item:hover {
+  transition: 0.7s;
+  border: 1px solid var(--color-white);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+
+/* Me */
+
+#me {
+  background-color: var(--color-yellow);
+  padding: 70px;
+}
+
+#me h1 {
+  display: flex;
+  justify-content: center;
+}
+
+#me p {
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+#me img {
+  display: block;
+  margin: 30px auto;
+  width: 600px;
+  height: 600px;
+  border-radius: 100% 100% 100% 100%;
 }
