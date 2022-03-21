@@ -58,6 +58,8 @@ h1 {
   font-weight: var(--weight-bold);
   color: var(--color-black);
   margin: 16px 0px;
+  display: flex;
+  justify-content: center;
 }
 
 h2 {
@@ -65,6 +67,8 @@ h2 {
   font-weight: var(--weight-semi-bold);
   color: var(--color-black);
   margin: 8px 0;
+  display: flex;
+  justify-content: center;
 }
 
 h3 {
@@ -72,13 +76,16 @@ h3 {
   font-weight: var(--weight-regular);
   color: var(--color-black);
   margin: 8px 0;
+  display: flex;
+  justify-content: center;
 }
 
 p {
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
   color: var(--color-black);
-
+  display: flex;
+  justify-content: center;
   margin: 4px 0;
 }
 
@@ -155,15 +162,8 @@ header:after {
   padding: 70px;
 }
 
-#me h1 {
-  display: flex;
-  justify-content: center;
-}
-
 #me p {
   padding-top: 10px;
-  display: flex;
-  justify-content: center;
 }
 
 #me p:hover {
@@ -181,13 +181,22 @@ header:after {
 }
 
 #me img:hover {
-  transform: rotate(360deg);
+  -webkit-animation: rotation 2s infinite linear;
   transition: 3s;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
 /* Skill */
 #skills {
-  background-color: var(--color-yellow);
+  background-color: var(--color-light-grey);
 }
 
 .skillset {
@@ -239,4 +248,11 @@ header:after {
 .tools,
 .etc {
   padding: 20px;
+}
+
+/* Hobby */
+
+#hobby {
+  background-color: #e0f8f7;
+  padding: 70px;
 }
