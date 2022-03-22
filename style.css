@@ -181,16 +181,16 @@ header:after {
 }
 
 #me img:hover {
-  -webkit-animation: rotation 2s infinite linear;
+  animation: rotation 2s infinite linear;
   transition: 3s;
 }
 
 @-webkit-keyframes rotation {
   from {
-    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -255,4 +255,25 @@ header:after {
 #hobby {
   background-color: #e0f8f7;
   padding: 70px;
+}
+
+.hob_photo_wrapper {
+  display: flex;
+}
+
+#hobby .img {
+  display: flex;
+  width: 350px;
+  height: 350px;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  filter: blur(3px);
+}
+
+#hobby .img:hover {
+  filter: blur(0);
+  transition: 0.3s ease-in-out;
 }
