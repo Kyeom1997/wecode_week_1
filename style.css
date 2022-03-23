@@ -185,7 +185,7 @@ header:after {
   transition: 3s;
 }
 
-@-webkit-keyframes rotation {
+@keyframes rotation {
   from {
     transform: rotate(0deg);
   }
