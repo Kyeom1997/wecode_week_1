@@ -163,10 +163,6 @@ header:after {
   padding-top: 10px;
 }
 
-#me p {
-  padding-top: 10px;
-}
-
 #me p:hover {
   transform: scale(1.2);
   color: var(--color-blue);
@@ -286,15 +282,15 @@ header:after {
 #gallery {
   background-color: var(--color-orange);
   height: 1200px;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .slider {
-  width: 1000px;
-  height: 800px;
+  width: 800px;
+  height: 600px;
   position: relative;
+  padding-top: 50px;
   margin: 0 auto;
-  padding-top: 80px;
   overflow: hidden; /* 현재 슬라이드 오른쪽에 위치한 나머지 슬라이드 들이 보이지 않도록 가림 */
 }
 .slider input[type="radio"] {
@@ -479,4 +475,31 @@ ul.imgs li {
   margin: 10px;
   padding: auto;
   color: var(--color-white);
+}
+
+@media screen and (min-width: 2000px) {
+  #me {
+    background-color: var(--color-yellow);
+    padding: 70px;
+    height: 1300px;
+    padding-top: 150px;
+  }
+
+  #skills {
+    background-color: var(--color-dark-white);
+    height: 1300px;
+    padding-top: 200px;
+  }
+
+  #gallery {
+    background-color: var(--color-orange);
+    height: 1300px;
+    padding-top: 100px;
+  }
+
+  #contact {
+    background-color: var(--color-pink);
+    height: 800px;
+    padding-top: 500px;
+  }
 }
