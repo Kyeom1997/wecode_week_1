@@ -159,9 +159,8 @@ header:after {
 
 #me {
   background-color: var(--color-yellow);
-  padding: 70px;
-  height: 1300px;
-  padding-top: 150px;
+  height: 1000px;
+  padding-top: 10px;
 }
 
 #me p {
@@ -199,8 +198,8 @@ header:after {
 /* Skill */
 #skills {
   background-color: var(--color-dark-white);
-  height: 1300px;
-  padding-top: 200px;
+  height: 1000px;
+  padding-top: 20px;
 }
 
 .skillset {
@@ -286,8 +285,8 @@ header:after {
 
 #gallery {
   background-color: var(--color-orange);
-  height: 1300px;
-  padding-top: 100px;
+  height: 1200px;
+  padding-top: 20px;
 }
 
 .slider {
@@ -448,7 +447,7 @@ ul.imgs li {
 #contact {
   background-color: var(--color-pink);
   height: 800px;
-  padding-top: 500px;
+  padding-top: 200px;
 }
 
 .contact__title,
