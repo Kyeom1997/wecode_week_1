@@ -514,4 +514,34 @@ ul.imgs li {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--color-white);
+  }
+
+  #navbar.navbar--dark {
+    padding: 16px;
+  }
+
+  .navbar_menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+
+  .skillset {
+    flex-direction: column;
+  }
+
+  .hob_photo_wrapper {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #hobby .img {
+    width: auto;
+    height: auto;
+  }
 }
