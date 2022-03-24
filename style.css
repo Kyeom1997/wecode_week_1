@@ -121,7 +121,6 @@ header:after {
 
 .page_logo {
   display: flex;
-  font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   justify-content: center;
   font-size: 70px;
@@ -271,8 +270,8 @@ header:after {
 
 #hobby .img {
   display: flex;
-  width: 350px;
-  height: 350px;
+  width: 500px;
+  height: 500px;
   justify-content: center;
   align-content: center;
   margin: auto;
@@ -312,6 +311,7 @@ ul.imgs {
   margin: 0;
   list-style: none;
 }
+
 ul.imgs li {
   position: absolute;
   left: 640px;
@@ -328,6 +328,7 @@ ul.imgs li {
   bottom: 20px;
   z-index: 2;
 }
+
 .bullets label {
   display: inline-block;
   border-radius: 50%;
@@ -520,29 +521,57 @@ ul.imgs li {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  #navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: var(--color-white);
+  header {
+    height: 700px;
+    position: relative;
+    z-index: 1;
   }
 
-  #navbar.navbar--dark {
-    padding: 16px;
+  .page_logo {
+    padding: 70px;
+    font-size: 40px;
+    font-weight: var(--weight-semi-bold);
+    padding-top: 100px;
+  }
+
+  .page_logo i {
+    margin: 10px;
   }
 
   .navbar_menu {
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-    display: none;
+    font-size: 15px;
   }
 
   .skillset {
     flex-direction: column;
+    padding: 0;
   }
 
   .hob_photo_wrapper {
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .bullets {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 270px;
+    z-index: 2;
+  }
+
+  .bullets label {
+    display: inline-block;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.55);
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+  }
+
+  #gallery {
+    background-color: var(--color-orange);
+    height: 600px;
+    padding-top: 10px;
   }
 }
