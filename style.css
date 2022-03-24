@@ -545,9 +545,4 @@ ul.imgs li {
     flex-direction: column;
     justify-content: center;
   }
-
-  #hobby .img {
-    width: auto;
-    height: auto;
-  }
 }
