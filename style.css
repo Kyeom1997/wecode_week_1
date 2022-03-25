@@ -302,6 +302,7 @@ header:after {
   margin: 0 auto;
   overflow: hidden; /* 현재 슬라이드 오른쪽에 위치한 나머지 슬라이드 들이 보이지 않도록 가림 */
 }
+
 .slider input[type="radio"] {
   display: none;
 }
@@ -488,6 +489,41 @@ ul.imgs li {
   color: var(--color-white);
 }
 
+.arrow-up {
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+  width: 200px;
+  height: 200px;
+  font-size: 50px;
+  color: var(--color-black);
+  border-style: none;
+  background: none;
+  opacity: 0;
+  /* display는 완전히 없어졌다 나타나는 것이기 때문에 opacity를 사용해야 함. */
+  transition: all var(--animation-duration) ease-in;
+  pointer-events: none;
+}
+
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.arrow-up.visible:hover {
+  animation: up-down 0.5s infinite ease-in-out alternate;
+}
+
+@keyframes up-down {
+  from {
+    transform: translatey(0px);
+  }
+  to {
+    transform: translatey(-40px);
+  }
+}
+
 @media screen and (min-width: 2000px) {
   #me {
     background-color: var(--color-yellow);
@@ -573,5 +609,17 @@ ul.imgs li {
     background-color: var(--color-orange);
     height: 600px;
     padding-top: 10px;
+  }
+
+  .arrow-up {
+    right: 10px;
+    bottom: 30px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+  }
+
+  .arrow-up p {
+    font-size: small;
   }
 }
