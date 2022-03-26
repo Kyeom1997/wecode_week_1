@@ -491,16 +491,15 @@ ul.imgs li {
 
 .arrow-up {
   position: fixed;
-  right: 10px;
   bottom: 20px;
-  width: 200px;
+  width: 150px;
   height: 200px;
+  right: 10px;
   font-size: 50px;
   color: var(--color-black);
   border-style: none;
   background: none;
   opacity: 0;
-  /* display는 완전히 없어졌다 나타나는 것이기 때문에 opacity를 사용해야 함. */
   transition: all var(--animation-duration) ease-in;
   pointer-events: none;
 }
@@ -565,7 +564,7 @@ ul.imgs li {
 
   .page_logo {
     padding: 70px;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: var(--weight-semi-bold);
     padding-top: 100px;
   }
@@ -578,9 +577,18 @@ ul.imgs li {
     font-size: 15px;
   }
 
+  .section__container p {
+    margin-bottom: 20px;
+    font-size: medium;
+  }
+
   .skillset {
     flex-direction: column;
-    padding: 0;
+    padding: auto;
+    margin: 0;
+  }
+
+  .etc {
   }
 
   .hob_photo_wrapper {
