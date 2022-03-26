@@ -460,17 +460,23 @@ ul.imgs li {
   padding-top: 200px;
 }
 
-.contact__title,
-.contact__email,
-.contact__rights {
+.contact_title,
+.contact_email,
+.contact_rights {
   color: var(--color-white);
 }
 
-.contact__title {
+.contact_title {
   margin: 32px 0;
+  transition: 1s;
 }
 
-.contact__links {
+.contact_title:hover {
+  color: yellow;
+  text-shadow: 0 0 0.1em, 0 0 0.3em;
+}
+
+.contact_links {
   display: flex;
   font-size: var(--font-large);
   justify-content: center;
@@ -479,13 +485,13 @@ ul.imgs li {
   transition: all var(--animation-duration) ease-in;
 }
 
-.contact__links i:hover {
+.contact_links i:hover {
   transform: scale(1.1);
   color: red;
   transition: all var(--animation-duration) ease-in;
 }
 
-.contact__links a {
+.contact_links a {
   margin: 10px;
   padding: auto;
   color: var(--color-white);
@@ -590,9 +596,6 @@ ul.imgs li {
     flex-direction: column;
     padding: auto;
     margin: 0;
-  }
-
-  .etc {
   }
 
   .hob_photo_wrapper {
