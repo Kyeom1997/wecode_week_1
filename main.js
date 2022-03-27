@@ -1,3 +1,11 @@
+// function about scroll smoothly
+function scrollIntoView(e) {
+  const scrollTo = document.querySelector(e);
+  scrollTo.scrollIntoView({
+    behavior: "smooth",
+  });
+}
+
 // Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector(".navbar_menu");
 navbarMenu.addEventListener("click", (event) => {
@@ -9,14 +17,6 @@ navbarMenu.addEventListener("click", (event) => {
   navbarMenu.classList.remove("open");
   scrollIntoView(link);
 });
-
-// function about scroll smoothly
-function scrollIntoView(e) {
-  const scrollTo = document.querySelector(e);
-  scrollTo.scrollIntoView({
-    behavior: "smooth",
-  });
-}
 
 // Show "arrow up" button when scrolling down
 const home = document.querySelector("header");
