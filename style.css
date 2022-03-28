@@ -181,20 +181,20 @@ img {
   margin: 30px auto;
   width: 400px;
   height: 400px;
-  border-radius: 100% 100% 100% 100%;
+  border-radius: 50%;
 }
 
 #me img:hover {
-  animation: rotation 2s infinite linear;
+  animation: rotation 2s infinite ease;
   transition: 3s;
 }
 
 @keyframes rotation {
   from {
-    transform: rotate(0deg);
+    transform: rotateY(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotateY(360deg);
   }
 }
 
