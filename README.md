@@ -115,3 +115,49 @@ background-attachment 속성을 fixed로 설정하면, 배경을 뷰포트에 �
 이를 해결하기 위해서는, CSS의 가상요소인 `::after`를 통해 `<header>`의 자식 의사 요소를 추가하면 된다. 기존 `<header>` 태그의 자식 의사 요소에 background 요소와 opacity를 설정한 후, `z-index`를 통해 해당 요소의 z축을 뒤로 보내면, 배경화면에만 opacity가 적용됨을 확인할 수 있다.
 
 ![](https://images.velog.io/images/hang_kem_0531/post/710c0870-45ee-4612-bf81-1154c99e0933/ezgif-2-8e17382a3a.gif)
+
+navbar의 버튼을 클릭해서 해당 레이아웃으로 이동하는 기능은 Javascript가 필요했다. 우선 dataset을 활용하기 위해 navbar 메뉴의 HTML 요소에서 dataset attribute를 customize했다.
+
+```html
+<nav id="navbar">
+	<ul class="navbar_menu">
+		<li class="navbar_menu_item" data-link="#me">About Me</li>
+		<li class="navbar_menu_item" data-link="#skills">Skills</li>
+		<li class="navbar_menu_item" data-link="#hobby">Hobby</li>
+		<li class="navbar_menu_item" data-link="#gallery">Gallery</li>
+		<li class="navbar_menu_item" data-link="#contact">Contact</li>
+	</ul>
+</nav>
+```
+
+dataset attribute를 customize 하기 위해서는 `data-(변수명)` 식으로 작성하고 value 값을 주면 된다. 여기서는 dataset에 link라는 변수를 주고 value 값으로 해당 레이아웃들의 id 값을 주었다.
+
+
+```js
+// function about scroll smoothly
+function scrollIntoView(e) {
+  const scrollTo = document.querySelector(e);
+  scrollTo.scrollIntoView({
+    behavior: "smooth",
+  });
+}
+
+// Handle scrolling when tapping on the navbar menu
+const navbarMenu = document.querySelector(".navbar_menu");
+navbarMenu.addEventListener("click", (event) => {
+  const target = event.target;
+  const link = target.dataset.link;
+  if (link == null) {
+    return;
+  }
+  navbarMenu.classList.remove("open");
+  scrollIntoView(link);
+});
+```
+
+navbar의 js 함수들이다. 우선 버튼을 클릭하면 스크롤되어 해당 레이아웃으로 이동하기 때문에, scrollIntoView 라는 함수를 정의해 해당 element로 `Window.scrollTo()` 되게 하였다. 여기서 behavior: "smooth" 값을 적용해 조금 더 부드러운 스크롤이 가능하도록 구현하였다.
+
+그리고 `navbar_menu`의 class 값을 불러와 addEventListener로 click 이벤트를 등록하였다. 여기서 dataset의 link 변수를 불러오기 위해 target이라는 변수에 `event.target`값을, link라는 변수에 `target.dataset.link` 값을 저장하였다. link 값이 null인 경우에는 return 명령문을, link 값이 유효할 때는 앞서 선언한 scrollIntoView 함수를 통해 link 값에 할당된 레이아웃으로 이동하도록 이벤트 핸들러를 등록하였다.
+
+![](https://images.velog.io/images/hang_kem_0531/post/dc143f7f-6c94-40d7-ad9c-4c436cbdae47/scroll.gif)
+
