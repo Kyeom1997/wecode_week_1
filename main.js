@@ -19,7 +19,7 @@ navbarMenu.addEventListener("click", (event) => {
 });
 
 // Show "arrow up" button when scrolling down
-const home = document.querySelector("header");
+const home = document.querySelector("#header");
 const homeHeight = home.getBoundingClientRect().height;
 const arrowUp = document.querySelector(".arrow-up");
 document.addEventListener("scroll", () => {
