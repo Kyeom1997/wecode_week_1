@@ -296,7 +296,6 @@ img {
   width: 800px;
   height: 600px;
   position: relative;
-  max-width: 100%;
   padding-top: 50px;
   margin: 0 auto;
   overflow: hidden; /* 현재 슬라이드 오른쪽에 위치한 나머지 슬라이드 들이 보이지 않도록 가림 */
@@ -316,7 +315,7 @@ ul.imgs li {
   position: absolute;
   left: 640px;
   transition-delay: 1s; /* 새 슬라이드가 이동해 오는 동안 이전 슬라이드 이미지가 배경이 보이도록 지연 */
-
+  width: 800px !important;
   padding: 0;
   margin: 0;
 }
@@ -600,9 +599,13 @@ ul.imgs li {
     justify-content: center;
   }
 
+  ul.imgs li {
+    max-width: 454px;
+  }
+
   .bullets {
     position: absolute;
-    left: 50%;
+    left: 30%;
     transform: translateX(-50%);
     bottom: 270px;
     z-index: 2;

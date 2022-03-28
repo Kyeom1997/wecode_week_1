@@ -32,5 +32,5 @@ document.addEventListener("scroll", () => {
 
 // Handle click on the "arrow up" button
 arrowUp.addEventListener("click", () => {
-  scrollIntoView("header");
+  scrollIntoView("#header");
 });
