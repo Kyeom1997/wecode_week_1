@@ -161,3 +161,50 @@ navbar의 js 함수들이다. 우선 버튼을 클릭하면 스크롤되어 해�
 
 ![](https://images.velog.io/images/hang_kem_0531/post/dc143f7f-6c94-40d7-ad9c-4c436cbdae47/scroll.gif)
 
+**2. About Me**
+
+레이아웃의 시작인 About Me 레이아웃이다. 아무래도 HTML & CSS를 중점적으로 활용하여 만드는 자기소개 페이지이다 보니까 CSS animation 속성들을 많이 활용하고 싶었다. 그래서 조금은 뜬금없지만 내 사진이 빙글빙글 돌게 하는 건 어떨까 싶어 적용해 보았다.
+
+```css
+#me img {
+  display: block;
+  margin: 30px auto;
+  width: 400px;
+  height: 400px;
+  border-radius: 100% 100% 100% 100%;
+}
+
+#me img:hover {
+  animation: rotation 2s infinite ease;
+  transition: 3s;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+```
+
+우선 이미지를 둥글게 하기 위해 width와 height 값을 같게 설정한 후, border-radius 값을 50%로 주었다. 그리고 아무래도 내가 계속 빙글빙글 돌아가는 건 좀 어지러울 거 같아서, 마우스를 올렸을 때, 즉 `:hover` 상태일 때만 animation을 주기로 했다. animation은 rotation 2s에 무한대로 돌 수 있도록 infinite를 주었다.
+
+그리고 3D로 도는 듯한 느낌을 주고 싶어서, `@keyframes` 속성을 사용해 Y축 0deg에서 부터 360deg까지 돌도록 설정하였다. 
+
+![](https://images.velog.io/images/hang_kem_0531/post/03af39af-4606-4d38-9dee-37504a5d186d/rotate.gif)
+<center> 빙글 빙글 돌아가는 맷돌~ </center> <br>
+
+
+아래의 개인 정보들은 hover시 scale(1.2)와 blue color를 주었다.
+
+```css
+#me p:hover {
+  transform: scale(1.2);
+  color: var(--color-blue);
+  transition: 0.5s;
+}
+```
+
+![](https://images.velog.io/images/hang_kem_0531/post/acec29c9-72af-421d-859e-d93791f3c94e/hover.gif)
