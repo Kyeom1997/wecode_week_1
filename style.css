@@ -297,6 +297,7 @@ img {
   height: 600px;
   position: relative;
   padding-top: 50px;
+  max-width: 100%;
   margin: 0 auto;
   overflow: hidden; /* 현재 슬라이드 오른쪽에 위치한 나머지 슬라이드 들이 보이지 않도록 가림 */
 }
@@ -605,7 +606,7 @@ ul.imgs li {
 
   .bullets {
     position: absolute;
-    left: 30%;
+    left: 50%;
     transform: translateX(-50%);
     bottom: 270px;
     z-index: 2;
