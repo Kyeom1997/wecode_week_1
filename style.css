@@ -136,6 +136,46 @@ img {
   color: var(--color-white);
 }
 
+#subnav {
+  position: fixed;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  opacity: 0;
+}
+
+#subnav.visible {
+  opacity: 1;
+  pointer-events: auto;
+  cursor: pointer;
+  background-color: white;
+  z-index: 1;
+  height: auto;
+}
+
+.sub_navbar_menu {
+  display: flex;
+  justify-content: center;
+  font-size: var(--font-medium);
+}
+
+.sub_navbar_menu_item {
+  padding: 8px 12px;
+  margin: 0 4px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: var(--size-border-radius);
+}
+
+.sub_navbar_menu_item:hover {
+  transition: 0.7s;
+  border: 1px solid var(--color-white);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+
 .navbar_menu {
   display: flex;
   justify-content: center;
@@ -163,7 +203,7 @@ img {
 #me {
   background-color: var(--color-yellow);
   height: 1000px;
-  padding-top: 10px;
+  padding-top: 100px;
 }
 
 #me p {
@@ -202,7 +242,7 @@ img {
 #skills {
   background-color: var(--color-dark-white);
   height: 1000px;
-  padding-top: 20px;
+  padding-top: 100px;
 }
 
 .skillset {
@@ -260,7 +300,7 @@ img {
 
 #hobby {
   background-color: #e0f8f7;
-  padding: 70px;
+  padding: 100px;
 }
 
 .hob_photo_wrapper {
@@ -289,7 +329,7 @@ img {
 #gallery {
   background-color: var(--color-orange);
   height: 1200px;
-  padding-top: 10px;
+  padding-top: 100px;
 }
 
 .slider {

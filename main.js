@@ -34,3 +34,24 @@ document.addEventListener("scroll", () => {
 arrowUp.addEventListener("click", () => {
   scrollIntoView("#header");
 });
+
+// Show "Subnav" when scrolling down
+const navbar = document.querySelector("#subnav");
+document.addEventListener("scroll", () => {
+  if (window.scrollY > homeHeight / 2) {
+    navbar.classList.add("visible");
+  } else {
+    navbar.classList.remove("visible");
+  }
+});
+
+const subnavbarMenu = document.querySelector(".sub_navbar_menu");
+subnavbarMenu.addEventListener("click", (event) => {
+  const target = event.target;
+  const link = target.dataset.link;
+  if (link == null) {
+    return;
+  }
+  subnavbarMenu.classList.remove("open");
+  scrollIntoView(link);
+});
