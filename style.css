@@ -614,7 +614,8 @@ ul.imgs li {
 
   #contact {
     background-color: var(--color-pink);
-    height: 500px;
+    height: 1000px;
+    padding-top: 500px;
   }
 }
 
