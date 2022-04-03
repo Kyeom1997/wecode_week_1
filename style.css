@@ -124,11 +124,29 @@ img {
   justify-content: center;
   font-size: 70px;
   padding: 300px;
-  padding-bottom: 200px;
+  padding-bottom: 120px;
 }
 
 .page_logo i {
   margin: 20px;
+}
+
+.header_typing {
+  margin-bottom: 200px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 30px;
+}
+
+.blink {
+  animation: blink 0.5s infinite;
+}
+
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
 }
 
 .page_logo:hover {
@@ -605,6 +623,11 @@ ul.imgs li {
     height: 700px;
     position: relative;
     z-index: 1;
+  }
+
+  .header_typing {
+    font-size: 15px;
+    margin-bottom: 100px;
   }
 
   .page_logo {

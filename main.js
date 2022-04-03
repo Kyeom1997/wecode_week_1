@@ -55,3 +55,19 @@ subnavbarMenu.addEventListener("click", (event) => {
   subnavbarMenu.classList.remove("open");
   scrollIntoView(link);
 });
+
+// Header Typing
+const content = "안녕하세요, 프론트엔드 개발자를 꿈꾸는 김형겸입니다.";
+const text = document.querySelector(".header_typing_txt");
+let i = 0;
+
+function typing() {
+  let txt = content[i++];
+  text.innerHTML += txt;
+  if (i > content.length) {
+    text.textContent = "";
+    i = 0;
+  }
+}
+
+setInterval(typing, 200);
